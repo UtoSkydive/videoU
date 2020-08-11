@@ -177,7 +177,7 @@
     function videoItem(movie,category){
       return(
 
-      `<div class="primaryPlaylistItem" data-id="${movie.id}" data-category=${category}>
+      `<div class="primaryPlaylistItem carousel__elemento" data-id="${movie.id}" data-category=${category}>
           <div class="primaryPlaylistItem-image">
           <img src="${movie.medium_cover_image}">
           </div>

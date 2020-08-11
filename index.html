@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Platzi Video</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+  <link rel="stylesheet" href="src/css/slide.css">
   <link rel="stylesheet" href="src/css/home.css" />
   <link rel="stylesheet" href="src/css/modal.css" />
 </head>
@@ -13,11 +16,12 @@
       <div class="sidebar">
         <div class="logo">
           <figure class="logo-image">
-            <img src="src/images/platzi-video.png" alt="Platzi Video - la Plataforma de videos cheveres"/>
+            <img src="src/images/logo.png" alt="Platzi Video - la Plataforma de videos cheveres"/>
+            <h2>VideoTube</h2>
           </figure>
         </div>
         <div class="sidebarPlaylist">
-          <h2 class="sidebarPlaylist-title">Mi Playlist <span class="btn warning">Escuchar Playlist</span> </h2>
+          <h2 class="sidebarPlaylist-title">Mi Playlist </h2>
           <ol class="myPlaylist" id="myPlayList">
             
           </ol>
@@ -42,30 +46,40 @@
           <div class="user">
             <p>
               <img src="src/images/covers/gorillaz.jpg" alt=""/>
-              <span>Leonidas Esteban</span>
+              <span style="color:white">Augusto Caceres</span>
             </p>
           </div>
         </div>
         <div class="primary-list">
-          <div class="primaryPlaylist">
-            <h3 class="primaryPlaylist-topic">A los golpes</h3>
-            <h2 class="primaryPlaylist-title">Acción</h2>
-            <div class="primaryPlaylist-list" id="action">
-              <img src="src/images/loader.gif" width="50" height="50" alt="">
+          <div class="carousel">
+            <div class="primaryPlaylist carousel__contenedor">
+              <button aria-label="Anterior" class="carousel__anterior">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <h3 class="primaryPlaylist-topic">A los golpes</h3>
+              <h2 class="primaryPlaylist-title">Acción</h2>
+              <div class="primaryPlaylist-list carousel__lista" id="action">
+                <img src="src/images/loader.gif" width="50" height="50" alt="">
+              </div>
+              <button aria-label="Siguiente" class="carousel__siguiente">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
+            <!-- <div role="tablist" class="carousel__indicadores"></div> -->
           </div>
-          <div class="primaryPlaylist">
+          
+          <div class="primaryPlaylist carousel__contenedor">
             <h3 class="primaryPlaylist-topic">Para llorar</h3>
             <h2 class="primaryPlaylist-title">Drama</h2>
-            <div class="primaryPlaylist-list" id="drama">
+            <div class="primaryPlaylist-list carousel__lista" id="drama">
               <img src="src/images/loader.gif" width="50" height="50" alt="">
            
             </div>
           </div>
-          <div class="primaryPlaylist">
+          <div class="primaryPlaylist carousel__contenedor">
             <h3 class="primaryPlaylist-topic">Dibujitos animados</h3>
             <h2 class="primaryPlaylist-title">Animación</h2>
-            <div class="primaryPlaylist-list" id="animation">
+            <div class="primaryPlaylist-list carousel__lista" id="animation">
               <img src="src/images/loader.gif" width="50" height="50" alt="">
             </div>
           </div>
@@ -89,7 +103,11 @@
       <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
     </div>
   </div>
+  <!-- glider js -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/js/app.js"></script>
   <script src="src/js/home.js"></script>
 </body>
 </html>
